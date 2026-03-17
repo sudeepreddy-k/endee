@@ -54,3 +54,15 @@ The application will open at `http://localhost:8501`.
 
 ---
 *(Note: The original Endee documentation `README_ENDEE.md` is preserved in the root directory for reference).*
+
+## Application Interface
+
+### Home Page
+![Home](ai_project/home.png)
+
+### Example Query
+![Search](ai_project/search.png)
+
+### Results
+![Results](ai_project/results.png)
+
