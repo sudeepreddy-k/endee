@@ -1,4 +1,6 @@
 streamlit
-endee
+faiss-cpu
 sentence-transformers
 torch
+numpy
+PyPDF2

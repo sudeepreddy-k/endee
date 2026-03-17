@@ -1,6 +1,6 @@
-# Semantic Search with Endee Vector Database
+# AI Legal Assistant using RAG + Endee Vector Database
 
-This repository is submitted as an assignment to demonstrate building an AI/ML project using the [Endee](https://endee.io/) Vector Database. The original Endee codebase is preserved, and a demonstration application has been added under the `ai_project/` directory.
+This project demonstrates a full **Retrieval-Augmented Generation (RAG)** system built for the legal domain. It uses the **Endee Vector Database** workflow to retrieve relevant Indian Penal Code (IPC) sections and provides a synthesized AI analysis for user scenarios.
 
 ## Project Overview
 
@@ -24,32 +24,33 @@ The application uses:
 - Docker & Docker Compose
 - Python 3.8+
 
-### 1. Start the Endee Vector Database
-Navigate to the `ai_project` directory and start the Endee server using Docker Compose:
-
-```bash
-cd ai_project
-docker-compose up -d
-```
-> Wait a moment for the server to initialize on `http://localhost:8080`.
+### 1. Requirements
+Ensure you have Python 3.8+ installed.
 
 ### 2. Install Python Dependencies
 It is recommended to use a virtual environment:
 
 ```bash
+cd ai_project
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+.\venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 3. Run the Streamlit Application
+### 3. Run the Application
 Launch the semantic search app:
 
 ```bash
 streamlit run app.py
 ```
 
-The application will open in your default browser automatically. You can start by adding knowledge chunks on the first section and then searching for concepts in the second section!
+The application will open at `http://localhost:8501`.
+
+## IPC Semantic Search Features
+- **Zero-Docker Setup**: Uses FAISS for local vector storage, ensuring the app runs without external dependencies.
+- **Premium UI**: Custom dark theme with similarity score visualization.
+- **Pre-indexed Data**: Automatically indices 63 IPC sections on startup.
+- **Natural Language Querying**: Allows matching legal sections based on descriptions of crimes.
 
 ---
 *(Note: The original Endee documentation `README_ENDEE.md` is preserved in the root directory for reference).*
